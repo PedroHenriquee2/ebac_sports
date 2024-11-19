@@ -1,8 +1,21 @@
 import { useEffect, useState } from 'react'
 import Header from './components/Header'
 import Produtos from './containers/Produtos'
+import carrinho from './components/Produto/carrinho'
+import AddToCarrinhoButton from './components/Produto/AddCarrinho'
 
 import { GlobalStyle } from './styles'
+
+const App = () => {
+  const sampleProduct = { id: '1', name: 'Produto Exemplo' };
+
+  return (
+    <div>
+      <AddToCarrinhoButton product={sampleProduct} />
+      <carrinho />
+    </div>
+  );
+};
 
 export type Produto = {
   id: number
